@@ -8,6 +8,8 @@ Custom designed portfolio template.
 
 # Features
 - ReactJS
+- Progressive Web App (PWA)
+- MVC
 - JSON Api
 - Material UI
 - Bundled js
