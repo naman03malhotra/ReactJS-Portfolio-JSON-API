@@ -1,0 +1,27 @@
+ninja:
+
+idx text order status
+
+work:
+
+idx org title subtitle text date order status
+
+projects:
+
+idx title text link order status
+
+Courses:
+
+idx title donefrom univ grade c_status order status
+
+Skills:
+
+idx text order status
+
+when
+why
+what
+who
+positive
+negative
+final

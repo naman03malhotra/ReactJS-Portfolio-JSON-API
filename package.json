@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Naman Malhotra's portfolio",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify assets/js/app.js -t [ babelify --presets [ react ] ] -o bundle.js",
+    "watch": "watchify assets/js/app.js -t [ babelify --presets [ react ] ] -o bundle.js",
+    "uglify": "uglifyjs bundle.js > bundle.min.js",
+    "buildx": "npm run build && npm run uglify && npm run watch"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.16.0",
+    "babelify": "^7.3.0",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "jquery-scrollify": "^1.0.7",
+    "nprogress": "^0.2.0",
+    "particles.js": "^2.0.0"
+  },
+  "author": "Naman",
+  "license": "ISC"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Naman Malhotra",
+  "icons": [ {
+      "src": "assets/img/icon/n1.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }],
+ "display": "fullscreen",
+  "orientation": "any",
+  "start_url": "/",
+  "background_color": "#fff",
+  "theme_color":"#0c84e4"
+}
