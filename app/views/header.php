@@ -4,36 +4,35 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title><?= htmlspecialchars($title) ?></title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-    
-    
+
+
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"> 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/ultimate.min.css">
-    
+
 
     <meta name="title" content="<?= htmlspecialchars($title) ?>">
     <meta name="keywords" content="<?= htmlspecialchars($keywords) ?>">
     <meta name="description" content="<?= htmlspecialchars($description) ?>">
-    
+
     <meta name="publisher" content="<?= htmlspecialchars($site_name) ?>">
     <meta name="copyright" content="<?= htmlspecialchars($site_name) ?>">
     <link rel="canonical" href="<?= htmlspecialchars($site_name) ?>" />
-    <meta name="revisit-after" content="1 day">  
+    <meta name="revisit-after" content="1 day">
 
 
-    
-    
-    
-    
+
+
+
+
     <meta property="fb:app_id" content="230753397334445" />
     <meta property="og:title" content="<?= htmlspecialchars($title) ?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?= htmlspecialchars($site_name) ?>">
-    
-    <meta property="og:image" content="assets/img/projects/por.jpg"> 
+
+    <meta property="og:image" content="assets/img/projects/por.jpg">
 
 <meta property="og:description" content="<?= htmlspecialchars($description) ?>">
 <meta property="og:site_name" content="<?= htmlspecialchars($site_name) ?>" />
@@ -125,9 +124,9 @@ mixpanel.init("923c7db870919e5c3a67484ea4d846bb");</script><!-- end Mixpanel -->
 
                         <li class="hvr-underline-from-center"><a href="#ninja">Ninja</a></li>
 
-                        <li class="hvr-underline-from-center"><a href="#journey">Work Ex</a></li>
+                        <li class="hvr-underline-from-center"><a href="#work">Work Ex</a></li>
 
-                        <li class="hvr-underline-from-center"><a href="#smallProjects">Projects</a></li>
+                        <li class="hvr-underline-from-center"><a href="#projects">Projects</a></li>
                         <li class="hvr-underline-from-center"><a href="#resume">Resume</a></li>
                         <li class="hvr-float-shadow active"><a href="#contact">Connect</a></li>
 
@@ -148,7 +147,7 @@ mixpanel.init("923c7db870919e5c3a67484ea4d846bb");</script><!-- end Mixpanel -->
 Follow </a></div>
                 <div class="row">
                     <ul class="icon">
-                        <li><a target="_blank" href="https://www.facebook.com/naman03malhotra"><i class="fa fa-facebook-square"></i></a></li>
+                       <!-- <li><a target="_blank" href="https://www.facebook.com/naman03malhotra"><i class="fa fa-facebook-square"></i></a></li> -->
                         <li><a target="_blank" href="https://linkedin.com/in/naman03malhotra"><i class="fa fa-linkedin-square"></i></a></li>
                         <li><a target="_blank" href="https://twitter.com/naman03malhotra"><i class="fa fa-twitter-square"></i></a></li>
                         <li><a target="_blank" href="https://plus.google.com/u/0/+NamanMalhotra"><i class="fa fa-google-plus-square"></i></a></li>
@@ -159,5 +158,5 @@ Follow </a></div>
             </div>
 
         </div>
-        
-    </header> 
+
+    </header>
