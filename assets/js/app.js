@@ -9,7 +9,7 @@
 /**
 Nprogress loading bar
 */
-var NProgress = require('NProgress');
+var NProgress = require('nprogress');
 
 /**
  * partcles js load
@@ -30,7 +30,7 @@ var NProgress = require('NProgress');
  require('jquery-scrollify')(window);
 
 
- 
+
 
  //var niceScroll = require('jquery.nicescroll');
 
@@ -51,7 +51,7 @@ particlesJS.load('part', 'assets/particles.json', function() {
 
 
 // device detection
-var isMobile = false; 
+var isMobile = false;
 if (/Mobi/.test(navigator.userAgent))
 	isMobile = true;
 
@@ -68,15 +68,15 @@ var ar = ["<i class='fa fa-quote-left'></i> Java is to JavaScript what Car is to
 "<i class='fa fa-quote-left'></i> Computers are good at following instructions, but not at reading your mind. <i class='fa fa-quote-right'></i>",
 "<i class='fa fa-quote-left'></i> One of my most productive days was throwing away 1000 lines of code. <i class='fa fa-quote-right'></i>"];
 
-NProgress.start();  
-NProgress.set(0.6); 
+NProgress.start();
+NProgress.set(0.6);
 
 
-$(window).on('load', function() { 
+$(window).on('load', function() {
 		setTimeout(function() {
-			NProgress.done(); 
+			NProgress.done();
 		}, 500);
-		
+
 
 	})
 
@@ -95,7 +95,7 @@ function myLoop()
 		});
 
 		if(++i >= ar.length)
-			i = 0;  
+			i = 0;
 
 	};
 	//
@@ -108,7 +108,7 @@ function myLoop()
 
 $(function() {
 
-	myLoop(); 
+	myLoop();
 	$.scrollify({
 		section:".sections",
 		interstitialSection:".sectionsFull",
@@ -122,11 +122,11 @@ $(function() {
 $("#myonoffswitch3").click(function()
 {
 	if($('#myonoffswitch3').is(":checked"))
-	{		
+	{
 		$.scrollify.enable();
 	}
 	else
-	{				
+	{
 		$.scrollify.disable();
 	}
 
@@ -173,7 +173,7 @@ $(function() {
  */
 
 
- $(window).scroll(function() 
+ $(window).scroll(function()
  {
 
  	var top_dist = $(window).scrollTop()/70;
@@ -184,17 +184,17 @@ $(function() {
 
  });
 
- function getRandomInt(min, max) 
+ function getRandomInt(min, max)
  {
  	return Math.floor(Math.random() * (max - min + 1)) + min;
  }
 
 
-var fetchDb = function(callback) 
+var fetchDb = function(callback)
 
-{  
-                
-         
+{
+
+
 
         if (window.XMLHttpRequest)
             {
@@ -208,11 +208,11 @@ var fetchDb = function(callback)
         xmlhttp.onreadystatechange = function()
           {
                 if (xmlhttp.readyState == 1)
-                {                                    
-                                                 
+                {
+
                 }
               else if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
-                {                                    
+                {
                     var response=JSON.parse(xmlhttp.responseText); // parsing JSON string obtained
 
                     {
@@ -220,33 +220,33 @@ var fetchDb = function(callback)
 					    localStorage.setItem('data', xmlhttp.responseText);
 					    var now = new Date();
 						now.setTime(now.getTime() + 3600 * 1000 * 1);
-						document.cookie = "name=value; expires=" + now.toUTCString() + "; path=/";                           
-                       callback(response); // Fire Callback                                             
-                    }   
+						document.cookie = "name=value; expires=" + now.toUTCString() + "; path=/";
+                       callback(response); // Fire Callback
+                    }
                 }
            }
-        
+
           {
             xmlhttp.open("POST","getData",true);
             xmlhttp.send(); // send inputs and mode.
           }
-          
+
 }
 
 
 
 
-$(document).ready(function() 
-  { 
-   
+$(document).ready(function()
+  {
+
   	//mixpanel.track("Initial Hit");
-  //	if (!document.cookie || !localStorage.getItem('data')) 
+  //	if (!document.cookie || !localStorage.getItem('data'))
   	{
   		//console.log('localStorage not set');
   		fetchDb(displayData);
-  		
-  	} 
-  /*	else 
+
+  	}
+  /*	else
   	{
   		console.log('localStorage set');
   		var data = localStorage.getItem('data');
@@ -285,11 +285,11 @@ $(document).ready(function()
 
 $('body')
 .on('touchstart mousedown', function(e){
-  
+
 
 	if(isMobile)
      toggleFullScreen();
-  
+
 });
  /**
   * Require React
@@ -340,7 +340,7 @@ var displayData = function(mydata)
 			else
 			{
 				return (
-					<div key={index} className="row wow fadeInUp" data-wow-delay={((index+1)*0.1)+'s'} data-wow-duration="1s">      
+					<div key={index} className="row wow fadeInUp" data-wow-delay={((index+1)*0.1)+'s'} data-wow-duration="1s">
 				      <div className="col-md-10 col-md-offset-2">
 				        <div className="card_org">
 				          <blockquote className="blockquote-reverse">
@@ -381,10 +381,10 @@ var displayData = function(mydata)
 			 var divStyle = {
             					backgroundImage: 'url(assets/img/work/' + imgUrl + ')'
         					}
-			
+
 			return (
 			 <div key={index} className="row wow fadeInUp" data-wow-delay={((index+1)*0.1)+'s'} data-wow-duration="1s">
-		      <div className="col-md-12">         
+		      <div className="col-md-12">
 
 
 		        <div className="card project-wrapper hvr-float-shadow" style={divStyle}>
@@ -400,7 +400,7 @@ var displayData = function(mydata)
 		          		</div>
 		          	</div>
 		            <br/>
-		            
+
 		            <span>{(isMobile)?work.text.substring(0,100)+'...':work.text}</span>
 		            <br/>
 		            <br/>
@@ -411,10 +411,10 @@ var displayData = function(mydata)
 
 
 
-		      </div>        
+		      </div>
 		    </div>
 			);
-			
+
 		});
 
 		return (
@@ -435,32 +435,32 @@ var displayData = function(mydata)
 			 var divStyle = {
             					backgroundImage: 'url(assets/img/projects/' + imgUrl + ')'
         					}
-			
+
 			return (
-		      <div key={index} className="col-md-6 wow fadeInUp" data-wow-delay={((index+1)*0.1)+'s'} data-wow-duration="1s">      
+		      <div key={index} className="col-md-6 wow fadeInUp" data-wow-delay={((index+1)*0.1)+'s'} data-wow-duration="1s">
 
 
 		        <div className="card project-wrapper hvr-float-shadow" style={divStyle}>
 
 		          <div className="project-details-wrapper">
-		            <h2><a href={project.link} target="_blank"><p>{project.title}</p></a></h2> 
+		            <h2><a href={project.link} target="_blank"><p>{project.title}</p></a></h2>
 		            <br/>
 		            <span>{project.text}</span>
 		            <br/>
 		            <br/>
-		            <a href={project.link} target="_blank" className="btn btn-default"> View </a> 
+		            <a href={project.link} target="_blank" className="btn btn-default"> View </a>
 		          </div>
 		          <div className="project-overlay"></div>
 		        </div>
 
 
 
-		      </div>    
-		        
-		    			 
+		      </div>
+
+
 
 			);
-			
+
 		});
 
 		return (
@@ -479,11 +479,11 @@ var displayData = function(mydata)
 		var courseMapped = this.props.courseData.map(function(courses,index){
 			 var imgUrlDoneFrom = 'assets/img/courses/'+courses.donefrom.substring(0,3)+'.png';
 			 var imgUniv = 'assets/img/courses/'+courses.univ;
-				
-			
+
+
 			return (
 			  <div key={index} className="row wow fadeInUp" data-wow-delay={((index+1)*0.1)+'s'} data-wow-duration="1s">
-			      <div className="col-md-12">         
+			      <div className="col-md-12">
 			        <div className="card_org">
 			          <div className="container-fluid">
 			            <div className="row">
@@ -498,7 +498,7 @@ var displayData = function(mydata)
 			      </div>
 			    </div>
 			);
-			
+
 		});
 
 		return (
@@ -515,16 +515,16 @@ var displayData = function(mydata)
 	var Skills = React.createClass({
 
 		render: function(){
-		var skillsMapped = this.props.skillsData.map(function(skill,index){				
-			
+		var skillsMapped = this.props.skillsData.map(function(skill,index){
+
 			return (
-			
+
 		      <button key={index} className="btn btn-primary my-skills btn-lg">{skill.text}</button>
-		   
-		
-			  
+
+
+
 			);
-			
+
 		});
 
 		return (
@@ -557,10 +557,10 @@ var displayData = function(mydata)
 				        I'm not a Ninja but...
 				      </h3>
 				      <hr className="primary"/>
-				    </div>  
-				   
-				   <NinjaList ninjaData={this.props.Data.ninja}/>		   
-				    
+				    </div>
+
+				   <NinjaList ninjaData={this.props.Data.ninja}/>
+
 				  </div>
 			</section>
 
@@ -569,14 +569,14 @@ var displayData = function(mydata)
 
 			    <div className="row">
 			      <h3 className="section-heading text-center">
-			        Work Ex     
+			        Work Ex
 			      </h3>
 			      <hr className="primary"/>
 			    </div>
 
 			    <WorkEx workData={this.props.Data.work}/>
 
-			    
+
 
 			  </div>
 			</section>
@@ -586,7 +586,7 @@ var displayData = function(mydata)
 
 			    <div className="row">
 			      <h3 className="section-heading text-center color-white">
-			        Projects    
+			        Projects
 			      </h3>
 			      <hr className="primary-white"/>
 			    </div>
@@ -594,7 +594,7 @@ var displayData = function(mydata)
 
 			    <Projects projectData={this.props.Data.projects}/>
 			    </div>
-			    
+
 
 			  </div>
 			</section>
@@ -604,12 +604,12 @@ var displayData = function(mydata)
 			  <div className="container-fluid">
 			    <div className="row">
 			      <h3 className="section-heading text-center">
-			        Courses   
+			        Courses
 			      </h3>
 			      <hr className="primary"/>
 			    </div>
 			    <div className="row wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-			      <div className="col-md-12">         
+			      <div className="col-md-12">
 			        <div className="card_org card_head">
 			          <div className="container-fluid">
 			            <div className="row">
@@ -624,8 +624,8 @@ var displayData = function(mydata)
 			      </div>
 			    </div>
 
-			   <Courses courseData={this.props.Data.courses}/>    
-			   
+			   <Courses courseData={this.props.Data.courses}/>
+
 			  </div>
 			</section>
 
@@ -647,7 +647,7 @@ var displayData = function(mydata)
 
 			</section>
 
-			
+
 			<section className="sectionsFull" id="resume">
 
 			  <div className="container-fluid">
@@ -673,7 +673,7 @@ var displayData = function(mydata)
 			  <div className="container-fluid">
 			    <div className="row">
 			      <h3 className="section-heading text-center color-white">
-			        Let's Connect 
+			        Let's Connect
 			      </h3>
 			      <hr className="primary-white" />
 			    </div>
